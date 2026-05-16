@@ -1,0 +1,8 @@
+BASE_URL = "https://madnessbackend-production.up.railway.app"
+TARGET_PLAYER = "Лорнет"
+DEFAULT_STOP_HP = 600
+DEFAULT_STIM_ENERGY = 30
+DEFAULT_AUTO_STIM = True
+DEFAULT_AUTO_RAIDS = True
+DEFAULT_SHOUT = False
+REQUEST_TIMEOUT = 20.0
