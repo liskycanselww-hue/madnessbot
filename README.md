@@ -4,22 +4,66 @@ Madness RPG desktop client на Python + PyQt5.
 
 ## Установка
 
+### Linux/macOS
+
 1. Убедитесь, что установлен Python 3.11+
-2. Установите зависимости:
+2. Клонируйте репозиторий:
+
+```bash
+git clone https://github.com/liskycanselww-hue/madnessbot
+cd madnessbot
+```
+
+3. Создайте виртуальное окружение:
+
+```bash
+python3 -m venv venv
+source venv/bin/activate  # На macOS: source venv/bin/activate
+```
+
+4. Установите зависимости:
 
 ```bash
 pip install -r requirements.txt
 ```
 
+### Windows
+
+1. Убедитесь, что установлены:
+   - Python 3.11+ (скачайте с https://www.python.org/downloads/)
+   - Git (скачайте с https://git-scm.com/)
+
+2. Откройте PowerShell как администратор и клонируйте репозиторий:
+
+```powershell
+git clone https://github.com/liskycanselww-hue/madnessbot
+cd madnessbot
+```
+
+3. Создайте виртуальное окружение:
+
+```powershell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+```
+
+4. Установите зависимости:
+
+```powershell
+pip install -r requirements.txt
+```
+
 ## Запуск
+
+### На компьютере
 
 ```bash
 python main.py
 ```
 
-### Headless режим для проверки
+Откроется окно приложения. Вставьте свой Telegram `initData` в поле логина и нажмите `START`.
 
-Если в среде нет графического дисплея, можно запустить тестовую проверку без GUI:
+### Headless режим (без GUI)
 
 ```bash
 python main.py --headless --init-data "<your telegram initData>"

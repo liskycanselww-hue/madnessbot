@@ -8,11 +8,16 @@ from battle_manager import BattleManager
 from gui import MainWindow
 
 
-async def run_gui() -> int:
+def run_gui() -> None:
     app = QApplication([])
     window = MainWindow()
     window.show()
-    return await app.exec_()
+    
+    loop = qasync.QEventLoop(app)
+    asyncio.set_event_loop(loop)
+    
+    with loop:
+        loop.run_forever()
 
 
 def run_headless(init_data: str) -> int:
@@ -49,6 +54,4 @@ if __name__ == "__main__":
             raise SystemExit("--init-data required in headless mode")
         run_headless(args.init_data)
     else:
-        if not os.environ.get("DISPLAY"):
-            os.environ.setdefault("QT_QPA_PLATFORM", "offscreen")
-        qasync.run(run_gui())
+        run_gui()
