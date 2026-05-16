@@ -18,7 +18,11 @@ python --version
 ```
 Должно вывести что-то вроде `Python 3.14.0`
 
-### Шаг 2: Установка Git
+### Шаг 2: Установка Git (опционально)
+
+Git нужен только если ты хочешь использовать команду `git clone`. Если нет — можешь пропустить этот шаг и скачать ZIP файл (см. Шаг 3, Способ B).
+
+Если хочешь установить Git:
 
 1. Перейди на https://git-scm.com/
 2. Скачай и установи Git для Windows
@@ -32,9 +36,11 @@ git --version
 
 ### Шаг 3: Клонирование репозитория
 
-Открой PowerShell **как администратор** (правый клик по PowerShell → "Запуск от имени администратора")
+**Способ A: С использованием Git (если установлен)**
 
-Введи команды одну за другой:
+Открой PowerShell **как администратор**
+
+Введи команды:
 
 ```powershell
 cd Desktop
@@ -43,7 +49,19 @@ cd madnessbot
 git clone https://github.com/liskycanselww-hue/madnessbot .
 ```
 
-После этого в папке `Desktop/madnessbot` будут все файлы проекта.
+**Способ B: Скачивание ZIP (если Git не установлен)**
+
+1. Перейди на https://github.com/liskycanselww-hue/madnessbot
+2. Нажми зелёную кнопку `Code` (справа вверху)
+3. Выбери `Download ZIP`
+4. Дождись загрузки файла `madnessbot-main.zip`
+5. Распакуй архив на Desktop
+6. Переименуй папку `madnessbot-main` в `madnessbot`
+7. Открой PowerShell и введи:
+
+```powershell
+cd Desktop\madnessbot
+```
 
 ### Шаг 4: Создание виртуального окружения
 
