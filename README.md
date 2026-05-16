@@ -4,6 +4,28 @@ Madness RPG desktop client на Python + PyQt5.
 
 ## Установка
 
+### Windows
+
+1. **Установите требуемое ПО:**
+   - Python 3.11+ с https://www.python.org/downloads/
+   - Git с https://git-scm.com/
+
+2. **Откройте PowerShell как администратор:**
+
+```powershell
+git clone https://github.com/liskycanselww-hue/madnessbot
+cd madnessbot
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+**Важно:** Если PowerShell ругается на `.\venv\Scripts\Activate.ps1`, выполните:
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+Потом повторите `.\venv\Scripts\Activate.ps1`
+
 ### Linux/macOS
 
 1. Убедитесь, что установлен Python 3.11+
@@ -18,38 +40,12 @@ cd madnessbot
 
 ```bash
 python3 -m venv venv
-source venv/bin/activate  # На macOS: source venv/bin/activate
+source venv/bin/activate
 ```
 
 4. Установите зависимости:
 
 ```bash
-pip install -r requirements.txt
-```
-
-### Windows
-
-1. Убедитесь, что установлены:
-   - Python 3.11+ (скачайте с https://www.python.org/downloads/)
-   - Git (скачайте с https://git-scm.com/)
-
-2. Откройте PowerShell как администратор и клонируйте репозиторий:
-
-```powershell
-git clone https://github.com/liskycanselww-hue/madnessbot
-cd madnessbot
-```
-
-3. Создайте виртуальное окружение:
-
-```powershell
-python -m venv venv
-.\venv\Scripts\Activate.ps1
-```
-
-4. Установите зависимости:
-
-```powershell
 pip install -r requirements.txt
 ```
 
